@@ -152,10 +152,9 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(array, string){
 
-    array.splice(array.indexOf(string));
+    array.splice(array.indexOf(string), 1);
     return array;
- console.log(array);
-// not sure how to remove by name??????????????????????
+
 }
 
 
@@ -180,15 +179,16 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(array, string){
+    let chocoFilter = []
     for (let i=0; i<array.length; i++){
-        if(array[i].includes("Chocolate")){
-            return (array)
+        if(array[i].includes(string)){
+         chocoFilter.push(array[i])
         }
     }
-
+ return chocoFilter
     
 }
-
+filterByWord(originalFlavors, "Chocolate");
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
